@@ -1,0 +1,28 @@
+.main-text
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    span
+        width: 100%;
+    h2
+        width: 50%
+    p 
+        width: 50%;
+.steps-blocks
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 50px;
+    margin-top: 50px
+    .step
+        &:nth-child(even)
+            margin-top: 200px
+        .step-top
+            position: relative;
+            .step-bg
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 50%;
+        img
+            width: 100%;
+            object-fit: cover;

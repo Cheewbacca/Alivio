@@ -1,0 +1,9 @@
+section.footer
+    .content.pt-pb-50
+        a(href="#").header_logo
+            include ../svg/header_logo
+        ul
+            -for(let [key, value] of nav){
+                li.mt-60 
+                    a(href="" + value).main-font.color-white= key
+            -}

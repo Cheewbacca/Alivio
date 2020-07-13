@@ -1,0 +1,40 @@
+.our_product
+    .content
+        display: flex
+        justify-content: space-between
+        .img-box
+            width: 50%;
+            position: relative;
+            .small_card
+                position: absolute
+                bottom: 0;
+                left: 0;
+                display: flex
+                align-items: center;
+                flex-direction: column;
+                flex-wrap: wrap
+                background-color: $white;
+                box-shadow: 0px 3.62249px 18.1125px rgba(165, 165, 165, 0.25);
+                width: calculateWidth(290)
+                @media screen and ( max-width: 768px  )
+                    width: tW(290)
+                @media screen and ( max-width: 768px  )
+                    width: 290px
+                h4
+                    padding-bottom: 7px
+                    border-bottom: 1px solid #000
+                .card-img
+                    width: calculateWidth(57)
+                    height: calculateWidth(57)
+                    border-radius: 50%;
+                    margin: 12px 0;
+                    @media screen and ( max-width: 768px )
+                        width: tW(57)
+                        height: tW(57)
+                    @media screen and ( max-width: 500px )
+                        width: 57px
+                        height: 57px
+                ul 
+                    list-style-type: disc
+        .text-block
+            width: 50%

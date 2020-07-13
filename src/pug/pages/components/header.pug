@@ -1,0 +1,18 @@
+header.padding
+    a(href="#").header_logo
+        include ../svg/header_logo
+    
+    nav 
+        ul  
+            -let nav = new Map();
+            -nav.set("Why Alivio", "#").set("Solutions", "#").set("Community", "#").set("Pricing", "#");
+            -for(let [key, value] of nav){
+                li 
+                    a(href="" + value).main-font= key
+            -}
+    
+    ul.header_buttons
+        li
+            a(href="#").main-font.color-black Sign in
+        li
+            a(href="#").main-font.green-btn Start Trial
