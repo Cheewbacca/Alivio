@@ -17,19 +17,43 @@ header
             margin-right: auto
     nav
         @media screen and ( max-width: 768px )
-            display: none
+            width: 50%;
+            background-color: $white;
+            position: fixed;
+            right: -100vw;
+            top: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center
+            justify-content: center
+            border-left: 1px solid $border-gray;
+            transition: right 1s;
+        @media screen and ( max-width: 500px )
+            width: 100%;
         ul 
             display: flex
+            @media screen and ( max-width: 768px )
+                flex-direction: columns;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                align-items: center;
+                width: 100%;
+                height: 100%
             li 
                 &:not(:first-child)
                     margin-left: calculateWidth(70)
+                @media screen and ( max-width: 768px )
+                    width: 100%;
+                    text-align: center
+                    &:not(:first-child)
+                        margin-left: initial
     .header_buttons
-        display: flex
+        display: flex;
         li 
             &:not(:first-child)
                 margin-left: calculateWidth(35)
 
-    .burger
+    #burger
         display: none
         justify-content: space-around;
         width: 15px;
@@ -37,9 +61,12 @@ header
         flex-direction: column;
         justify-self: flex-end
         margin-left: 25px;
+        z-index: 2;
+        @media screen and ( max-width: 768px )
+            display: flex;
         .strip
+            transition: transform 1s;
             width: 100%;
             height: 2px; 
             background-color: $black;
-        @media screen and ( max-width: 768px )
-            display: flex;
+       
