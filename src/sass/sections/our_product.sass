@@ -18,7 +18,15 @@
                 flex-wrap: wrap
                 background-color: $white;
                 box-shadow: 0px 3.62249px 18.1125px rgba(165, 165, 165, 0.25);
-                width: calculateWidth(290)
+                width: calculateWidth(290);
+                @media screen and ( min-width: 768px  )
+                    transition: transform 1s;
+                    cursor: pointer;
+                    animation: shake 1.5s linear;
+                    animation-iteration-count: infinite;
+                    &:hover
+                        animation: initial
+                        transform: scale(1.5)
                 @media screen and ( max-width: 768px  )
                     width: tW(290)
                 @media screen and ( max-width: 500px  )
@@ -53,3 +61,18 @@
             .img-box
                 margin-top: 50px;
                 order: 2;
+
+@keyframes shake
+    0%
+        transform: rotate(0deg);
+    10%
+        transform: rotate(2deg);
+    30% 
+        transform: rotate(0deg);
+    40% 
+        transform: rotate(-2deg);
+    50% 
+        transform: rotate(0deg);
+    100%
+        transform: rotate(0deg)
+        

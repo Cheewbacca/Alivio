@@ -42,6 +42,9 @@ header
             li 
                 &:not(:first-child)
                     margin-left: calculateWidth(70)
+                &:hover
+                    a
+                        color: $green;
                 @media screen and ( max-width: 768px )
                     width: 100%;
                     text-align: center
@@ -52,6 +55,23 @@ header
         li 
             &:not(:first-child)
                 margin-left: calculateWidth(35)
+            &:first-child
+                a
+                    position: relative;
+                    &::after
+                        position: absolute;
+                        content: " "
+                        left: 0;
+                        bottom: -5px;
+                        width: 25%;
+                        background-color: $green;
+                        height: 2px;
+                        transition: width .3s
+                &:hover
+                    a
+                        color: $green;
+                        &::after
+                            width: 100%;
 
     #burger
         display: none
