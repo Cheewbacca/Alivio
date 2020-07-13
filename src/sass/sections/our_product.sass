@@ -5,6 +5,9 @@
         .img-box
             width: 50%;
             position: relative;
+            @media screen and ( max-width: 500px )
+                position: static;
+                padding: initial;
             .small_card
                 position: absolute
                 bottom: 0;
@@ -18,8 +21,8 @@
                 width: calculateWidth(290)
                 @media screen and ( max-width: 768px  )
                     width: tW(290)
-                @media screen and ( max-width: 768px  )
-                    width: 290px
+                @media screen and ( max-width: 500px  )
+                    display: none
                 h4
                     padding-bottom: 7px
                     border-bottom: 1px solid #000
@@ -38,3 +41,15 @@
                     list-style-type: disc
         .text-block
             width: 50%
+            @media screen and ( max-width: 500px )
+                padding: initial;
+        @media screen and ( max-width: 768px )
+            flex-wrap: wrap
+            .text-block,
+            .img-box
+                width: 100%
+            .text-block
+                order: 0
+            .img-box
+                margin-top: 50px;
+                order: 2;
