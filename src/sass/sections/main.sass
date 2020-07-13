@@ -5,10 +5,13 @@
     align-items: center;
     background-image: url('../img/main_bg.png');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     @media screen and ( max-width: 768px )
         background-size: cover    
     .content    
+        height: 100%;
+        display: flex;
+        align-items: center;
         @media screen and ( max-width: 500px )
             height: 80%;
         .text-box
