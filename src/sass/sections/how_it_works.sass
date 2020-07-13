@@ -1,15 +1,21 @@
+.how_it_works
+    background-color: #ffffff
 .main-text
     display: flex
     justify-content: space-between
-    flex-wrap: wrap
+    flex-wrap: wrap;
+    overflow: hidden;
     span
         width: 100%;
     h2
         width: 50%;
         display: block;
-        position: relative;
+        transform: translate(-200%);
+        transition: transform 1s;
     p 
         width: 50%;
+        transform: translate(200%);
+        transition: transform 1s;
     @media screen and ( max-width: 768px )
         h2,
         p 
@@ -29,6 +35,8 @@
         @media screen and ( min-width: 768px )
             &:nth-child(even)
                 margin-top: 200px
+        opacity: 0
+        transition: opacity 1s;
         .step-top
             position: relative;
             .step-bg

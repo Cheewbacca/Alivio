@@ -9,6 +9,7 @@ header
     left: 0;
     width: 100%;
     z-index: 1;
+    transition: transform .5s
     @media screen and ( max-width: 768px )
         justify-content: flex-end;
     .header_logo
@@ -28,6 +29,7 @@ header
             justify-content: center
             border-left: 1px solid $border-gray;
             transition: right 1s;
+            z-index: 1;
         @media screen and ( max-width: 500px )
             width: 100%;
         ul 
